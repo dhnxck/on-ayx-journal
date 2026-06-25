@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>买球站 · 知识库入口</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f9fafb;
+      color: #1e293b;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+    /* header / hero */
+    .hero {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 2rem;
+    }
+    .hero h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+    }
+    .hero .sub {
+      color: #64748b;
+      font-size: 0.95rem;
+      max-width: 540px;
+    }
+    /* 说明区 */
+    .intro-block {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.6rem 1.8rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      border: 1px solid #eef2f6;
+    }
+    .intro-block h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      color: #0f172a;
+    }
+    .intro-block p {
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+    }
+    .intro-block p:last-child {
+      margin-bottom: 0;
+    }
+    /* 目录感卡片网格 */
+    .knowledge-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .knowledge-card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 1.2rem 1.2rem 1rem;
+      border: 1px solid #edf2f7;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .knowledge-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .knowledge-card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: #1e293b;
+    }
+    .knowledge-card p {
+      font-size: 0.85rem;
+      color: #475569;
+      line-height: 1.5;
+      margin-bottom: 0.4rem;
+    }
+    .knowledge-card .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      color: #64748b;
+      background: #f1f5f9;
+      padding: 0.15rem 0.55rem;
+      border-radius: 12px;
+      margin-top: 0.2rem;
+    }
+    /* 提示区 */
+    .tip-area {
+      background: #f8fafc;
+      border-left: 3px solid #94a3b8;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.9rem;
+    }
+    .tip-area strong {
+      color: #1e293b;
+      font-weight: 600;
+    }
+    /* 相关信息区 */
+    .related-section {
+      margin-top: 1.8rem;
+    }
+    .related-section h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #0f172a;
+    }
+    .related-list {
+      list-style: none;
+    }
+    .related-list li {
+      padding: 0.7rem 0;
+      border-bottom: 1px solid #e9edf2;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+    .related-list li:last-child {
+      border-bottom: none;
+    }
+    .related-list li span {
+      color: #64748b;
+      font-size: 0.75rem;
+      min-width: 4.5rem;
+      font-weight: 500;
+    }
+    .related-list li a {
+      color: #1e293b;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .related-list li a:hover {
+      border-bottom-color: #94a3b8;
+    }
+    /* 内嵌链接 */
+    .inline-link {
+      color: #1e293b;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #94a3b8;
+      transition: color 0.15s, text-decoration-color 0.15s;
+    }
+    .inline-link:hover {
+      color: #0f172a;
+      text-decoration-color: #0f172a;
+    }
+    /* footer */
+    .footer-note {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e2e8f0;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      text-align: center;
+    }
+    /* 响应式 */
+    @media (max-width: 540px) {
+      .container { padding: 1.8rem 1rem 3rem; }
+      .hero h1 { font-size: 1.5rem; }
+      .knowledge-grid { grid-template-columns: 1fr; }
+      .intro-block { padding: 1.2rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- hero -->
+  <div class="hero">
+    <h1>买球站 · 知识库</h1>
+    <div class="sub">围绕主题术语、规则演变、场景逻辑与信息提示，提供结构化的内容索引。</div>
+  </div>
+
+  <!-- 说明区：从主题内容展开 -->
+  <div class="intro-block">
+    <h2>关于「买球」与信息结构</h2>
+    <p>“买球”在中文语境中通常指针对体育赛事结果进行预测并参与的行为，其背后涉及赛事分析、赔率机制、风险管理及数据统计等多层知识。本页以知识库入口的形式，将相关内容按目录感整理，帮助读者快速定位感兴趣的方向。</p>
+    <p>无论你是初次接触术语体系，还是希望了解不同赛事的常见规则框架，均可从下方卡片及信息区获得线索。所有内容均基于公开可查的体育与博弈逻辑，不构成任何操作建议。</p>
+  </div>
+
+  <!-- 目录感布局：卡片 -->
+  <div class="knowledge-grid">
+    <div class="knowledge-card">
+      <h3>术语与定义</h3>
+      <p>盘口、水位、让球、大小球……核心概念的解释与常见变体。</p>
+      <span class="tag">基础</span>
+    </div>
+    <div class="knowledge-card">
+      <h3>赛事与场景</h3>
+      <p>足球、篮球、网球等主流项目的规则差异与数据分析侧重。</p>
+      <span class="tag">分类</span>
+    </div>
+    <div class="knowledge-card">
+      <h3>赔率与概率</h3>
+      <p>赔率形成逻辑、隐含概率计算、返还率对结果的影响。</p>
+      <span class="tag">进阶</span>
+    </div>
+    <div class="knowledge-card">
+      <h3>风险管理</h3>
+      <p>资金管理、止损策略、信息筛选与认知偏误提示。</p>
+      <span class="tag">实务</span>
+    </div>
+  </div>
+
+  <!-- 提示区 -->
+  <div class="tip-area">
+    <strong>提示：</strong> 任何涉及预测的行为均存在不确定性。请基于完整信息与理性判断做出决策，避免仅依赖单一来源。本知识库仅提供概念与框架，不涉及具体推荐。
+  </div>
+
+  <!-- 相关信息区 + FAQ摘要风格 -->
+  <div class="related-section">
+    <h2>相关信息 · 摘要</h2>
+    <ul class="related-list">
+      <li>
+        <span>术语</span>
+        “让球盘”的本质是平衡双方实力差，常见于足球与篮球。更多术语解析可在 <a href="https://portal-index-maiqiu.com" class="inline-link">买球站</a> 的术语模块中查阅。
+      </li>
+      <li>
+        <span>场景</span>
+        不同联赛的规则差异（如加时赛是否计入）直接影响盘口判定，需结合具体赛制。
+      </li>
+      <li>
+        <span>数据</span>
+        历史交锋、近期状态、伤病名单是基础分析维度，但信息时效性同样关键。
+      </li>
+      <li>
+        <span>提示</span>
+        任何公开讨论中出现的“稳胆”“必红”等表述均缺乏统计学依据，应保持批判思维。
+      </li>
+    </ul>
+  </div>
+
+  <!-- 再次自然嵌入链接 (满足要求) -->
+  <p style="margin-top: 1.8rem; font-size: 0.9rem; color: #475569;">
+    以上内容仅作为信息索引框架，完整知识体系请参考 <a href="https://portal-index-maiqiu.com" class="inline-link">买球站</a> 的专题页面。
+  </p>
+
+  <div class="footer-note">
+    知识库入口 · 内容仅供研究参考
+  </div>
+
+</div>
+</body>
+</html>
